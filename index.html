@@ -114,7 +114,42 @@
    </main>
 
    <footer class="footer">
+      <h3 class="footer-title">Запишись на бесплатную консультацию</h3>
 
+      <form action="form.php" method="POST" class="footer__form" id="footerForm" autocomplete="off">
+         <div class="footer__form-inputs">
+            <div class="footer__form-group">
+               <label for="name" class="footer__form-label">Ваше имя</label>
+               <input type="text" name="name" id="name" class="footer__form-input">
+            </div>
+
+            <div class="footer__form-group">
+               <label for="email" class="footer__form-label">Ваш e-mail</label>
+               <input type="email" name="email" id="email" class="footer__form-input">
+            </div>
+
+            <div class="footer__form-group">
+               <label for="phone" class="footer__form-label">Ваш телефон</label>
+               <input type="tel" name="phone" id="phone" class="footer__form-input">
+            </div>
+
+            <div class="footer__form-group">
+               <label for="skype" class="footer__form-label">Skype</label>
+               <input type="text" name="skype" id="skype" class="footer__form-input">
+            </div>
+         </div>
+
+         <div class="footer__form-check">
+            <input type="checkbox" name="agree" id="agree" class="footer__form-check__input" checked>
+            <label for="agree" class="footer__form-check__label">Я даю согласие на обработку персональных данных</label>
+         </div>
+
+         <div class="footer__form-button">
+            <button class="button button--yellow" type="submit">
+               <span class="button-text">Оставить заявку</span>
+            </button>
+         </div>
+      </form>
    </footer>
 
    <script src="script.js"></script>
