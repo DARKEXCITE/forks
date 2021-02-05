@@ -350,6 +350,28 @@ textarea {
     --montserrat: 'Montserrat', sans-serif;
 }
 
+html, body {
+    scrollbar-color: var(--yellow) #000000;     /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: thin;  /* толщина */
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: black;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--yellow);
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -550,6 +572,10 @@ body {
     font-size: 36px;
     line-height: 100%;
     color: white;
+}
+
+.timer span {
+    font-family: var(--montserrat) !important;
 }
 
 .header {

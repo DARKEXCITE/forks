@@ -58,7 +58,7 @@ const init = () => {
     const info = document.getElementById('info').offsetTop
     const testimonials = document.getElementById('testimonials').offsetTop
     const kit = document.getElementById('kit').offsetTop
-
+    const Y_MARGIN = 200
     /*
         Назначение активного элемента навигации
      */
@@ -73,12 +73,12 @@ const init = () => {
         Проверка позиции скролла
      */
     const checkScrollPosition = () => {
-        console.log(window.scrollY + 200 - kit)
-        if (window.scrollY + 200 - info <= 6 && window.scrollY + 200 - info > 0) {
+        console.log(window.scrollY + Y_MARGIN - kit)
+        if (window.scrollY + Y_MARGIN - info <= 6 && window.scrollY + Y_MARGIN - info > 0) {
             changeActiveNavItems(navItems[1])
-        } else if (window.scrollY + 200 - testimonials <= 6 && window.scrollY + 200 - testimonials > 0) {
+        } else if (window.scrollY + Y_MARGIN - testimonials <= 6 && window.scrollY + Y_MARGIN - testimonials > 0) {
             changeActiveNavItems(navItems[2])
-        } else if (window.scrollY + 200 - kit > 0) {
+        } else if (window.scrollY + Y_MARGIN - kit > 0) {
             changeActiveNavItems(navItems[3])
         } else if (window.scrollY < info / 2) {
             changeActiveNavItems(navItems[0])
