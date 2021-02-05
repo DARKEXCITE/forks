@@ -11,21 +11,21 @@
    <nav class="nav">
       <img src="img/logo.svg" alt="Logo" class="logo">
 
-      <ul class="nav-items">
-         <li class="nav-item nav-item--active"><a href="#!" class="nav-link"></a></li>
-         <li class="nav-item"><a href="#!" class="nav-link"></a></li>
-         <li class="nav-item"><a href="#!" class="nav-link"></a></li>
-         <li class="nav-item"><a href="#!" class="nav-link"></a></li>
+      <ul class="nav-items" id="navItems">
+         <li class="nav-item"><a href="#header" class="nav-link"><span class="nav-circle"></span></a></li>
+         <li class="nav-item"><a href="#info" class="nav-link"><span class="nav-circle"></span></a></li>
+         <li class="nav-item"><a href="#testimonials" class="nav-link"><span class="nav-circle"></span></a></li>
+         <li class="nav-item"><a href="#kit" class="nav-link"><span class="nav-circle"></span></a></li>
       </ul>
    </nav>
 
-   <header class="header">
+   <header class="header" id="header">
       <div class="container">
          <div class="header__container">
             <div class="intro">
                <h1 class="seo-title">Букмекерские вилки</h1>
                <h2 class="seo-subtitle">Индивидуальное обучение</h2>
-               <a href="#!" class="button"><span class="button-text">Подробнее</span></a>
+               <a href="#!" class="button" id="popupOpenButton"><span class="button-text">Подробнее</span></a>
 
                <div class="old-price">15 500₽</div>
                <div class="info">
@@ -33,14 +33,12 @@
                   <div class="timer">00 : 12 : 34 : 45</div>
                </div>
             </div>
-
-            <div class="promo"><img src="img/ball.png" alt="Ball"></div>
          </div>
          </div>
    </header>
 
    <main class="main">
-      <section class="info">
+      <section class="info" id="info">
          <div class="container">
             <h3 class="section-title">Что такое вилка?</h3>
             <p class="info-text">
@@ -65,7 +63,7 @@
          </div>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
          <div class="container">
             <h3 class="section-title">Что получишь от меня?</h3>
             <div class="testimonials__list">
@@ -99,7 +97,7 @@
          </div>
       </section>
 
-      <section class="kit">
+      <section class="kit" id="kit">
          <div class="container">
             <h3 class="section-title">При себе надо иметь:</h3>
             <ul class="kit-list">
@@ -151,6 +149,68 @@
          </div>
       </form>
    </footer>
+
+   <div class="popup popup--closed" id="popup">
+      <div class="popup__content">
+         <div class="popup__close"></div>
+         <div class="popup__body">
+            <p class="info-text">
+               Букмекерская вилка — это возможность сделать ставки на все возможные результаты состязания
+               в разных букмекерских конторах и получить прибыль независимо от исхода состязания.
+               Размер прибыли находится в пределах единиц процентов от суммы ставок или менее.
+               Хотя теоретически вероятность получения прибыли 100%,
+               в реальности возможен убыток из-за неодновременности, отмены ставок, разницы в правилах.
+            </p>
+            <p class="accent-text">
+               Предлагаю индивидуальное обучение вилкам по скайпу, после чего будет прикреплëн
+               <span class="text-bold">полный материал</span> с пошаговыми действиями, отвечу на все вопросы в режиме
+               онлайн и расскажу, как имея начальный банк увеличить его в <span class="text-bold">2-3 раза</span>.
+            </p>
+            <p class="text-bold text-bold--mb50">
+               Запишись на бесплатную консультацию
+            </p>
+            <form action="form.php" method="POST" class="footer__form" id="popupForm" autocomplete="off">
+               <div class="footer__form-inputs">
+                  <div class="footer__form-group">
+                     <label for="popupName" class="footer__form-label">Ваше имя</label>
+                     <input type="text" name="name" id="popupName" class="footer__form-input footer__form-input--white">
+                  </div>
+
+                  <div class="footer__form-group">
+                     <label for="popupEmail" class="footer__form-label">Ваш e-mail</label>
+                     <input type="email" name="email" id="popupEmail"
+                            class="footer__form-input footer__form-input--white">
+                  </div>
+
+                  <div class="footer__form-group">
+                     <label for="popupPhone" class="footer__form-label">Ваш телефон</label>
+                     <input type="tel" name="phone" id="popupPhone"
+                            class="footer__form-input footer__form-input--white">
+                  </div>
+
+                  <div class="footer__form-group">
+                     <label for="popupSkype" class="footer__form-label">Skype</label>
+                     <input type="text" name="skype" id="popupSkype"
+                            class="footer__form-input footer__form-input--white">
+                  </div>
+               </div>
+
+               <div class="footer__form-check">
+                  <input type="checkbox" name="agree" id="popupAgree" class="footer__form-check__input" checked>
+                  <label for="popupAgree" class="footer__form-check__label footer__form-check__label--white">
+                     Я даю согласие на обработку персональных данных
+                  </label>
+               </div>
+
+               <div class="footer__form-button">
+                  <button class="button button--white" type="submit">
+                     <span class="button-text">Оставить заявку</span>
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
 
    <script src="script.js"></script>
 </body>
