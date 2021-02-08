@@ -32,6 +32,7 @@ const init = () => {
     popupOpenButton.addEventListener('click', () => {
         popup.classList.remove('popup--closed')
         document.addEventListener('keydown', escapeClosePopup)
+        document.body.classList.add('overflow-hidden')
     })
 
     /*
@@ -39,6 +40,7 @@ const init = () => {
      */
     popupClose.addEventListener('click', () => {
         popup.classList.add('popup--closed')
+        document.body.classList.remove('overflow-hidden')
     })
 
     /*
@@ -48,6 +50,7 @@ const init = () => {
         if (e.key === 'Escape') {
             popup.classList.add('popup--closed')
             document.removeEventListener('keydown', escapeClosePopup)
+            document.body.classList.remove('overflow-hidden')
         }
     }
 
@@ -73,7 +76,6 @@ const init = () => {
         Проверка позиции скролла
      */
     const checkScrollPosition = () => {
-        console.log(window.scrollY + Y_MARGIN - kit)
         if (window.scrollY + Y_MARGIN - info <= 6 && window.scrollY + Y_MARGIN - info > 0) {
             changeActiveNavItems(navItems[1])
         } else if (window.scrollY + Y_MARGIN - testimonials <= 6 && window.scrollY + Y_MARGIN - testimonials > 0) {
