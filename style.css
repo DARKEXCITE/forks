@@ -1076,3 +1076,115 @@ body {
         padding-bottom: 50px;
     }
 }
+
+/*
+
+    Phone
+
+ */
+
+@media screen and (max-width: 630px) {
+    .container {
+        max-width: 300px;
+        padding-left: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .intro {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .header {
+        padding-top: 85px;
+        margin-bottom: 85px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('img/ball.png');
+        background-position: center;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    .testimonials__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        background: url("img/button-yellow-bg.svg") center/cover;
+    }
+
+    .new-price {
+        white-space: nowrap;
+    }
+
+    .button:not(.button--yellow):not(.button--white):before {
+        background: none;
+    }
+
+    .kit-item::before {
+        flex: 0 0 auto;
+    }
+
+    .footer__form-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__form-input {
+        max-width: 250px;
+    }
+
+    .popup__content {
+        margin: auto;
+        max-width: 390px;
+    }
+
+    .popup {
+        display: block;
+        padding: 20px 0 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup.popup--closed {
+        display: none;
+    }
+
+    .popup .info-text {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .popup .accent-text {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .text-bold.text-bold--popup {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .popup__close {
+        top: 5px;
+        right: 5px;
+    }
+
+    .footer__form-check__label.footer__form-check__label--white {
+        white-space: nowrap;
+    }
+}
