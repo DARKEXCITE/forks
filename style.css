@@ -342,7 +342,7 @@ textarea {
 
  */
 :root {
-    --yellow: #FFD654;
+    --yellow: #ffd654;
     --gray: #4C4C4C;
     --light-gray: #727272;
 
@@ -802,6 +802,42 @@ body {
     padding-bottom: 5px;
 }
 
+.footer__form-group--error {
+    animation: redShadow 1s ease;
+}
+
+.footer__form-check.footer__form-group--error {
+    animation: none;
+}
+
+.footer__form-check.footer__form-group--error .footer__form-check__label {
+    animation: colorRed 1s ease;
+}
+
+@keyframes redShadow {
+    from {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 20px 5px rgba(255, 0, 0, .3);
+    }
+    to {
+        box-shadow: none;
+    }
+}
+
+@keyframes colorRed {
+    from {
+        color: #727272;
+    }
+    50% {
+        color: red;
+    }
+    to {
+        color: #727272;
+    }
+}
+
 .footer__form-check {
     text-align: center;
     margin-bottom: 40px;
@@ -1150,7 +1186,7 @@ body {
 
     .popup {
         display: block;
-        padding: 20px 0 0;
+        padding: 20px 0;
         overflow-y: auto;
         overflow-x: hidden;
         right: auto;

@@ -3,11 +3,12 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta name="description" content="Букмекерская вилка — это возможность сделать ставки на все возможные результаты состязания в разных букмекерских конторах и получить прибыль независимо от исхода состязания. Размер прибыли находится в пределах единиц процентов от суммы ставок или менее.">
    <title>Букмекерские Вилки</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.min.css">
+   <link rel="stylesheet" href="libs/toast/toast.min.css">
 </head>
 <body>
-
    <nav class="nav">
       <img src="img/logo.svg" alt="Logo" class="logo">
 
@@ -21,21 +22,21 @@
 
    <header class="header" id="header">
       <div class="container">
-         <div class="header__container">
-            <div class="intro">
-               <h1 class="seo-title">Букмекерские вилки</h1>
-               <h2 class="seo-subtitle">Индивидуальное обучение</h2>
-               <a href="#!" class="button" id="popupOpenButton"><span class="button-text">Подробнее</span></a>
+            <div class="header__container">
+               <div class="intro" itemscope itemtype="http://schema.org/Organization">
+                  <h1 class="seo-title" itemprop="name">Букмекерские вилки</h1>
+                  <h2 class="seo-subtitle">Индивидуальное обучение</h2>
+                  <a href="#!" class="button" id="popupOpenButton"><span class="button-text">Подробнее</span></a>
 
-               <div class="intro__timer">
-                  <div class="old-price">15 500₽</div>
-                  <div class="info">
-                     <div class="new-price">11 300₽</div>
-                     <div class="timer"><script src="//megatimer.ru/get/d42e98c98141db832e4786253d0476ef.js"></script></div>
+                  <div class="intro__timer">
+                     <div class="old-price">15 500₽</div>
+                     <div class="info">
+                        <div class="new-price">11 300₽</div>
+                        <div class="timer"><script src="//megatimer.ru/get/d42e98c98141db832e4786253d0476ef.js"></script></div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
          </div>
    </header>
 
@@ -44,18 +45,17 @@
          <div class="container">
             <h3 class="section-title">Что такое вилка?</h3>
             <p class="info-text">
-               Букмекерская вилка — это возможность сделать ставки на все возможные результаты состязания в разных
-               букмекерских конторах и получить прибыль независимо от исхода состязания. Размер прибыли находится
-               в пределах единиц процентов от суммы ставок или менее. Хотя теоретически вероятность получения прибыли
-               100%, в реальности возможен убыток из-за неодновременности, отмены ставок, разницы в правилах.
+               Букмекерская вилка — это возможность сделать ставки на все возможные результаты состязания в разных букмекерских конторах и получить прибыль независимо от исхода состязания. Размер прибыли находится в пределах единиц процентов от суммы ставок или менее.
             </p>
             <p class="info-text info-text--hidden" id="infoTextHidden">
                Подобная стратегия возможна при разнице в коэффициентах одного и того же события у различных букмекеров.
                Букмекерские вилки чаще могут возникнуть в режиме ставок во время игры (Live Betting),
                например, во время баскетбольных матчей.<br><br>
-               Букмекерская вилка сходна с пространственным арбитражем на финансовом рынке,
-               когда в разных местах или на разных биржах на один и тот же товар имеются разные цены,
-               которые позволяют купив контракт в одном месте тут же перепродать его в другом месте с некоторой прибылью.<br><br>
+
+               Букмекерская вилка сходна с пространственным арбитражем на финансовом рынке, когда в разных местах или
+               на разных биржах на один и тот же товар имеются разные цены, которые позволяют купив контракт
+               в одном месте тут же перепродать его в другом месте с некоторой прибылью.<br><br>
+
                Большинство букмекерских контор, как правило, ограничивают игроков, которые специализируются на вилках,
                поскольку участие в пари таких игроков для конторы в долгосрочной перспективе невыгодно.
                Ограничение может выражаться в снижении максимальной суммы ставки,
@@ -116,31 +116,31 @@
    <footer class="footer">
       <h3 class="footer-title">Запишись на бесплатную консультацию</h3>
 
-      <form action="form.php" method="POST" class="footer__form" id="footerForm" autocomplete="off">
+      <form method="POST" class="footer__form" id="footerForm" autocomplete="off">
          <div class="footer__form-inputs">
             <div class="footer__form-group">
                <label for="name" class="footer__form-label">Ваше имя</label>
-               <input type="text" name="name" id="name" class="footer__form-input">
+               <input type="text" name="name" id="name" class="footer__form-input _req">
             </div>
 
             <div class="footer__form-group">
                <label for="email" class="footer__form-label">Ваш e-mail</label>
-               <input type="email" name="email" id="email" class="footer__form-input">
+               <input type="email" name="email" id="email" class="footer__form-input _req _email">
             </div>
 
             <div class="footer__form-group">
                <label for="phone" class="footer__form-label">Ваш телефон</label>
-               <input type="tel" name="phone" id="phone" class="footer__form-input">
+               <input type="tel" name="phone" id="phone" class="footer__form-input _req">
             </div>
 
             <div class="footer__form-group">
                <label for="skype" class="footer__form-label">Skype</label>
-               <input type="text" name="skype" id="skype" class="footer__form-input">
+               <input type="text" name="skype" id="skype" class="footer__form-input _req">
             </div>
          </div>
 
          <div class="footer__form-check">
-            <input type="checkbox" name="agree" id="agree" class="footer__form-check__input" checked>
+            <input type="checkbox" name="agree" id="agree" class="footer__form-check__input _req" checked>
             <label for="agree" class="footer__form-check__label">Я даю согласие на обработку персональных данных</label>
          </div>
 
@@ -160,8 +160,6 @@
                Букмекерская вилка — это возможность сделать ставки на все возможные результаты состязания
                в разных букмекерских конторах и получить прибыль независимо от исхода состязания.
                Размер прибыли находится в пределах единиц процентов от суммы ставок или менее.
-               Хотя теоретически вероятность получения прибыли 100%,
-               в реальности возможен убыток из-за неодновременности, отмены ставок, разницы в правилах.
             </p>
             <p class="accent-text">
                Предлагаю индивидуальное обучение вилкам по скайпу, после чего будет прикреплëн
@@ -171,34 +169,35 @@
             <p class="text-bold text-bold--popup">
                Запишись на бесплатную консультацию
             </p>
-            <form action="form.php" method="POST" class="footer__form" id="popupForm" autocomplete="off">
+            <form class="footer__form" id="popupForm" autocomplete="off">
                <div class="footer__form-inputs">
                   <div class="footer__form-group">
                      <label for="popupName" class="footer__form-label">Ваше имя</label>
-                     <input type="text" name="name" id="popupName" class="footer__form-input footer__form-input--white">
+                     <input type="text" name="name" id="popupName"
+                            class="footer__form-input footer__form-input--white _req">
                   </div>
 
                   <div class="footer__form-group">
                      <label for="popupEmail" class="footer__form-label">Ваш e-mail</label>
                      <input type="email" name="email" id="popupEmail"
-                            class="footer__form-input footer__form-input--white">
+                            class="footer__form-input footer__form-input--white _req _email">
                   </div>
 
                   <div class="footer__form-group">
                      <label for="popupPhone" class="footer__form-label">Ваш телефон</label>
                      <input type="tel" name="phone" id="popupPhone"
-                            class="footer__form-input footer__form-input--white">
+                            class="footer__form-input footer__form-input--white _req">
                   </div>
 
                   <div class="footer__form-group">
                      <label for="popupSkype" class="footer__form-label">Skype</label>
                      <input type="text" name="skype" id="popupSkype"
-                            class="footer__form-input footer__form-input--white">
+                            class="footer__form-input footer__form-input--white _req">
                   </div>
                </div>
 
                <div class="footer__form-check">
-                  <input type="checkbox" name="agree" id="popupAgree" class="footer__form-check__input" checked>
+                  <input type="checkbox" name="agree" id="popupAgree" class="footer__form-check__input _req" checked>
                   <label for="popupAgree" class="footer__form-check__label footer__form-check__label--white">
                      Я даю согласие на обработку персональных данных
                   </label>
@@ -214,6 +213,23 @@
       </div>
    </div>
 
-   <script src="script.js"></script>
+   <script src="script.min.js"></script>
+   <script src="libs/toast/toast.min.js"></script>
+
+   <!-- Yandex.Metrika counter -->
+   <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(72337045, "init", {
+           clickmap:true,
+           trackLinks:true,
+           accurateTrackBounce:true,
+           webvisor:true
+       });
+   </script>
+   <noscript><div><img src="https://mc.yandex.ru/watch/72337045" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+   <!-- /Yandex.Metrika counter -->
 </body>
 </html>
