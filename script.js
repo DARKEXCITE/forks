@@ -76,9 +76,9 @@ const init = () => {
         Проверка позиции скролла
      */
     const checkScrollPosition = () => {
-        if (window.scrollY + Y_MARGIN - info <= 6 && window.scrollY + Y_MARGIN - info > 0) {
+        if (window.scrollY + Y_MARGIN - info <= 12 && window.scrollY + Y_MARGIN - info > 0) {
             changeActiveNavItems(navItems[1])
-        } else if (window.scrollY + Y_MARGIN - testimonials <= 6 && window.scrollY + Y_MARGIN - testimonials > 0) {
+        } else if (window.scrollY + Y_MARGIN - testimonials <= 12 && window.scrollY + Y_MARGIN - testimonials > 0) {
             changeActiveNavItems(navItems[2])
         } else if (window.scrollY + Y_MARGIN - kit > 0) {
             changeActiveNavItems(navItems[3])
